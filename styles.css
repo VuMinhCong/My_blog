@@ -680,3 +680,77 @@ body[data-lang="vi"] [lang="vi"] {
         margin-bottom: 0.5rem;
     }
 }
+
+/* POPUP FOR PROJECT FACTORING */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-content {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 700px;
+  width: 95%;
+  position: relative;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.22);
+  animation: popupShow 0.25s cubic-bezier(.4,2,.6,1) 1;
+}
+@keyframes popupShow {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.popup-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 2.2rem;
+  color: #b66739;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.popup-close:hover {
+  color: #2A3B47;
+}
+.popup-content h3 {
+  color: #b66739;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.popup-content ul {
+  margin: 1rem 0 0 1.5rem;
+  padding: 0;
+  font-size: 1.08rem;
+  color: #333;
+  line-height: 1.7;
+}
+.popup-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1.08rem;
+  font-family: var(--body-font);
+}
+@media screen and (max-width: 600px) {
+  .popup-content {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .popup-close {
+    right: 1rem;
+    top: 0.7rem;
+    font-size: 2rem;
+  }
+  .popup-content h3 {
+    font-size: 1.1rem;
+  }
+  .popup-content ul, .popup-content li {
+    font-size: 0.98rem;
+  }
+}

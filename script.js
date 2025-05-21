@@ -101,6 +101,34 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.setAttribute('data-lang', savedLang);
 });
 
+function openFactoringPopup() {
+  document.getElementById('factoring-popup').style.display = 'flex';
+
+  const lang = document.body.getAttribute('data-lang') || 'ja';
+  document.querySelectorAll('#factoring-popup [lang]').forEach(el => {
+    el.style.display = (el.getAttribute('lang') === lang) ? 'block' : 'none';
+  });
+}
+function closeFactoringPopup() {
+  document.getElementById('factoring-popup').style.display = 'none';
+}
+
+function openGithubAnaPopup() {
+  var popup = document.getElementById('githubana-popup');
+  if (popup) {
+    popup.style.display = 'flex';
+    // Ẩn/hiện ngôn ngữ phù hợp
+    var lang = document.body.getAttribute('data-lang') || 'en';
+    popup.querySelectorAll('[lang]').forEach(function(el) {
+      el.style.display = (el.getAttribute('lang') === lang) ? 'block' : 'none';
+    });
+  }
+}
+function closeGithubAnaPopup() {
+  var popup = document.getElementById('githubana-popup');
+  if (popup) popup.style.display = 'none';
+}
+
 
 
 
