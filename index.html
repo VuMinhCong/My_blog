@@ -10,29 +10,25 @@
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>My blog responsive complete</title>
+        <title>VU MINH CONG - Portfolio</title>
     </head>
     <body>
-        <!--===== SCROLL TOP ====-->
-        <a href="#" class="scrolltop" id="scroll-top">
-            <i class='bx bx-chevron-up scrolltop__icon'></i>
-        </a>
-       
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Vu Minh Cong</a>
-                </div>
-
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#project" class="nav__link">My Project</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="#home" class="nav__link active" lang="ja">ホーム</a><a href="#home" class="nav__link active" lang="vi">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link" lang="ja">自己紹介</a><a href="#about" class="nav__link" lang="vi">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link" lang="ja">スキル</a><a href="#skills" class="nav__link" lang="vi">Skills</a></li>
+                        <li class="nav__item"><a href="#certificate" class="nav__link" lang="ja">資格・認定</a><a href="#certificate" class="nav__link" lang="vi">Certificates</a></li>
+                        <li class="nav__item"><a href="#project" class="nav__link" lang="ja">プロジェクト</a><a href="#project" class="nav__link" lang="vi">Projects</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link" lang="ja">連絡先</a><a href="#contact" class="nav__link" lang="vi">Contact</a></li>
                     </ul>
+                    <div class="language-switcher">
+                        <button onclick="switchLanguage('ja')" class="lang-btn" title="Japanese">🇯🇵</button>
+                        <button onclick="switchLanguage('vi')" class="lang-btn" title="Vietnamese">🇬🇧</button>
+                    </div>
                 </div>
 
                 <div class="nav__toggle" id="nav-toggle">
@@ -41,23 +37,31 @@
             </nav>
         </header>
 
+        <!--===== SCROLL TOP ====-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
         <main class="l-main">
             <!--===== HOME =====-->
             <section class="home" id="home">
                 <div class="home__container bd-grid">
-                    <h1 class="home__title"><span>HI!</span><br><span>I'M</span><br><span>CONG.</span></h1>
+                    <h1 class="home__title" lang="ja"><span>こんにちは！</span><br><span>私は</span><br><span>コンです。</span></h1>
+                    <h1 class="home__title" lang="vi"><span>HI!</span><br><span>I'M</span><br><span>CONG.</span></h1>
 
                     <div class="home__scroll">
-                        <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                        <a href="#about" class="home__scroll-link" lang="ja"><i class='bx bx-up-arrow-alt'></i>スクロールダウン</a>
+                        <a href="#about" class="home__scroll-link" lang="vi"><i class='bx bx-up-arrow-alt'></i>Scroll down</a>
                     </div>
 
-                    <img src="img/chot.png" alt="" class="home__img">
+                    <img src="img/chot1.png" alt="" class="home__img">
                 </div>
             </section>
-            
+
             <!--===== ABOUT =====-->
             <section class="about section" id="about">
-                <h2 class="section-title">About</h2>
+                <h2 class="section-title" lang="ja">自己紹介</h2>
+                <h2 class="section-title" lang="vi">About</h2>
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
@@ -65,13 +69,29 @@
                     </div>
 
                     <div>
-                        <h2 class="about__subtitle">My name's Vu Minh Cong</h2>
-                        <span class="about__profession">Friendly Coder!</span>
-                        <p class="about__text">私の生き方は三つ文章から大きな影響を受けました。まずは「七転び八起き」という文章。次は、「一人の知識は、無限の砂の海にある一粒の砂のようなものです」という文章。最後は「雨降って地固まる」という文章。</p>
+                        <h2 class="about__subtitle" lang="ja">ヴ ミン コン</h2>
+                        <h2 class="about__subtitle" lang="vi">VU MINH CONG</h2>
+
+                        <span class="about__profession" lang="ja">ソフトウェアエンジニア</span>
+                        <span class="about__profession" lang="vi">Software Engineer</span>
+
+                        <p class="about__text" lang="ja">
+                            1999年4月6日生まれ（26歳）<br>
+                            神奈川県川崎市在住<br><br>
+                            来日して、現在2年間Rubyを使用したアプリケーション開発の経験を積んでいます。特に、AWS認定資格を取得し、インフラやクラウドサービスへの理解を深めながら、アプリケーション開発と連携できるスキルを強化してきます。<br>
+                            仕事においては、常に品質を重視し、細部にまでこだわりながら成果を出すことを大切にしています。私は問題解決に対して積極的で、チームでのコミュニケーションを大切にしながら効率的に業務を進めるタイプです。
+                        </p>
+                        <p class="about__text" lang="vi">
+                            Born on 06/04/1999 (26 years old)<br>
+                            Currently living in Kawasaki, Kanagawa, Japan<br><br>
+                            After coming to Japan, I have accumulated 2 years of experience in Ruby application development. Especially, I have obtained AWS certification, which has helped me deepen my understanding of infrastructure and cloud services, as well as strengthen my skills in connecting application development and infrastructure.<br>
+                            In my work, I always prioritize quality, pay attention to every detail to achieve the best results. I am proactive in problem-solving and value teamwork communication for effective work.
+                        </p>
+
                         <div class="about__social">
-                            <a href="https://www.facebook.com/MinhCong999" class="about__social-icon"><i class='bx bxl-facebook-circle' ></i></a>
-                            <a href="https://twitter.com/Minh_Cong999" class="about__social-icon"><i class='bx bxl-twitter' ></i></a>
-                            <a href="https://github.com/VuMinhCong" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                            <a href="https://www.facebook.com/MinhCong999" class="about__social-icon"><i class='bx bxl-facebook-circle'></i></a>
+                            <a href="https://twitter.com/Minh_Cong999" class="about__social-icon"><i class='bx bxl-twitter'></i></a>
+                            <a href="https://github.com/VuMinhCong" class="about__social-icon"><i class='bx bxl-github'></i></a>
                         </div>
                     </div>
                 </div>
@@ -79,22 +99,30 @@
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title" lang="ja">スキル</h2>
+                <h2 class="section-title" lang="vi">Skills</h2>
 
                 <div class="skills__container bd-grid">
                     <div class="skills__box">
-                        <h3 class="skills__subtitle">Development</h3>
-                        <span class="skills__name">Html</span>
-                        <span class="skills__name">Css</span>
-                        <span class="skills__name">Javascript</span>
+                        <h3 class="skills__subtitle" lang="ja">開発スキル</h3>
+                        <h3 class="skills__subtitle" lang="vi">Development Skills</h3>
+
+                        <span class="skills__name">Ruby</span>
+                        <span class="skills__name">Ruby on Rails</span>
                         <span class="skills__name">Java</span>
-                        <span class="skills__name">C/C++</span>
-                        <span class="skills__name">Php</span>
-                        
-                        <h3 class="skills__subtitle">Design</h3>
-                        <span class="skills__name">Adobe Premiere</span>
-                        <span class="skills__name">Adobe Photoshop</span>
-                        <span class="skills__name">Photoshop</span>
+                        <span class="skills__name">JavaScript</span>
+                        <span class="skills__name">jQuery</span>
+                        <span class="skills__name">Database</span>
+                        <span class="skills__name">Docker</span>
+                        <span class="skills__name">CI/CD</span>
+                        <span class="skills__name">AWS</span>
+
+                        <h3 class="skills__subtitle" lang="ja">言語スキル</h3>
+                        <h3 class="skills__subtitle" lang="vi">Language Skills</h3>
+                        <span class="skills__name" lang="ja">日本語（ビジネス）</span>
+                        <span class="skills__name" lang="vi">Japanese (Business)</span>
+                        <span class="skills__name" lang="ja">英語（日常会話）</span>
+                        <span class="skills__name" lang="vi">English (Conversational)</span>
                     </div>
 
                     <div class="skills__img">
@@ -103,9 +131,40 @@
                 </div>
             </section>
 
+            <!--===== CERTIFICATE =====-->
+            <section class="certificate section" id="certificate">
+                <h2 class="section-title" lang="ja">資格・認定</h2>
+                <h2 class="section-title" lang="vi">Certificates</h2>
+                <div class="certificate__container bd-grid">
+                    <div class="certificate__item">
+                        <img src="img/JLPTN2.png" alt="JLPT N2" class="certificate__img">
+                        <div>
+                            <h3 class="certificate__name">JLPT N2</h3>
+                            <p class="certificate__desc" lang="ja">日本語能力試験 N2</p>
+                            <p class="certificate__desc" lang="vi">JLPT N2 Japanese Language Proficiency Test</p>
+                        </div>
+                    </div>
+                    <div class="certificate__item">
+                        <img src="img/SAA.png" alt="AWS SAA" class="certificate__img">
+                        <div>
+                            <h3 class="certificate__name"><a href="https://www.credly.com/badges/cb8868ec-c269-428a-ab70-faccd350439b" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect – Associate</a></h3>
+                            <p class="certificate__desc" lang="ja">AWS認定ソリューションアーキテクト – アソシエイト</p>
+                        </div>
+                    </div>
+                    <div class="certificate__item">
+                        <img src="img/DVA.png" alt="AWS DVA" class="certificate__img">
+                        <div>
+                            <h3 class="certificate__name"><a href="https://www.credly.com/badges/1eccae07-ab67-40e6-b468-9ca81c53d867" target="_blank" rel="noopener noreferrer">AWS Certified Developer – Associate</a></h3>
+                            <p class="certificate__desc" lang="ja">AWS認定デベロッパー – アソシエイト</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!--===== My Project =====-->
             <section class="project section" id="project">
-                <h2 class="section-title">My Project</h2>
+                <h2 class="section-title" lang="ja">プロジェクト</h2>
+                <h2 class="section-title" lang="vi">Projects</h2>
 
                 <div class="project__container bd-grid">
                     <div class="project__img">
@@ -113,7 +172,8 @@
 
                         <div class="project__link">
                             <a href="https://discovery-places-of-vietnam.herokuapp.com/" class="project__link-icon"><i class="bx bx-link-alt"></i></a>
-                            <span class="project__link-name">DISCOVERY VIETNAM</span>
+                            <span class="project__link-name" lang="ja">ベトナム観光案内</span>
+                            <span class="project__link-name" lang="vi">Discover Vietnam</span>
                         </div>
                     </div>
                     <div class="project__img">
@@ -121,56 +181,41 @@
 
                         <div class="project__link">
                             <a href="#" class="project__link-icon"><i class="bx bx-link-alt"></i></a>
-                            <span class="project__link-name">MY BLOG</span>
+                            <span class="project__link-name" lang="ja">個人ブログ</span>
+                            <span class="project__link-name" lang="vi">Personal Blog</span>
                         </div>
                     </div>
                     <div class="project__img">
-                        <img src="img/project2.jpg
-                        " alt="">
+                        <img src="img/project2.jpg" alt="">
 
                         <div class="project__link">
                             <a href="https://drive.google.com/file/d/1MWrfOh2o2G_uSWpGt2uDBdDJsBAmaTvZ/view?usp=sharing" class="project__link-icon"><i class="bx bx-link-alt"></i></a>
-                            <span class="project__link-name">CAFE MANAGER</span>
+                            <span class="project__link-name" lang="ja">カフェ管理システム</span>
+                            <span class="project__link-name" lang="vi">Cafe Management System</span>
                         </div>
                     </div>
-                    <!-- <div class="portfolio__img">
-                        <img src="assets/img/work4.jpg" alt="">
-
-                        <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-                    <div class="portfolio__img">
-                        <img src="assets/img/work5.jpg" alt="">
-
-                        <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div>
-                    <div class="portfolio__img">
-                        <img src="assets/img/work6.jpg" alt="">
-
-                        <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
-                        </div>
-                    </div> -->
                 </div>
             </section>
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
+                <h2 class="section-title" lang="ja">連絡先</h2>
+                <h2 class="section-title" lang="vi">Contact</h2>
 
                 <div class="contact__container bd-grid">
                     <div class="contact__info">
-                        <h3 class="contact__subtitle">EMAIL</h3>
-                        <span class="contact__text">cong.vm184052@sis.hust.edu.vn</span>
+                        <h3 class="contact__subtitle" lang="ja">メールアドレス</h3>
+                        <h3 class="contact__subtitle" lang="vi">Email</h3>
+                        <span class="contact__text">minhcong.vu99@gmail.com</span>
 
-                        <h3 class="contact__subtitle">PHONE</h3>
-                        <span class="contact__text">+84 918 361 623</span>
+                        <h3 class="contact__subtitle" lang="ja">電話番号</h3>
+                        <h3 class="contact__subtitle" lang="vi">Phone</h3>
+                        <span class="contact__text">070-2800-3487</span>
 
-                        <h3 class="contact__subtitle">ADDRESS</h3>
-                        <span class="contact__text">94 Tan Mai, Ha Noi, Viet Nam</span>
+                        <h3 class="contact__subtitle" lang="ja">住所</h3>
+                        <h3 class="contact__subtitle" lang="vi">Address</h3>
+                        <span class="contact__text" lang="ja">神奈川県川崎市多摩区菅城下17-18-313号室</span>
+                        <span class="contact__text" lang="vi">Room 313, 17-18 Sugashiroshita, Tama Ward, Kawasaki City, Kanagawa, Japan</span>
                     </div>
 
                     <form action="" class="contact__form">
@@ -191,26 +236,31 @@
         <footer class="footer section">
             <div class="footer__container bd-grid">
                 <div class="footer__data">
-                    <h2 class="footer__title">Vu Minh Cong</h2>
-                    <p class="footer__text">I'm Minh Cong and this is my personal website</p>
+                    <h2 class="footer__title" lang="ja">ヴ ミン コン</h2>
+                    <h2 class="footer__title" lang="vi">VU MINH CONG</h2>
+                    <p class="footer__text" lang="ja">ソフトウェアエンジニアのポートフォリオサイトです。</p>
+                    <p class="footer__text" lang="vi">This is my portfolio website - a software engineer.</p>
                 </div>
 
                 <div class="footer__data">
-                    <h2 class="footer__title">EXPLORE</h2>
+                    <h2 class="footer__title" lang="ja">メニュー</h2>
+                    <h2 class="footer__title" lang="vi">Menu</h2>
                     <ul>
-                        <li><a href="#home" class="footer__link">Home</a></li>
-                        <li><a href="#about" class="footer__link">About</a></li>
-                        <li><a href="#skills" class="footer__link">Skills</a></li>
-                        <li><a href="#project" class="footer__link">My project</a></li>
-                        <li><a href="#Contact" class="footer__link">Contact</a></li>
+                        <li><a href="#home" class="footer__link" lang="ja">ホーム</a><a href="#home" class="footer__link" lang="vi">Home</a></li>
+                        <li><a href="#about" class="footer__link" lang="ja">自己紹介</a><a href="#about" class="footer__link" lang="vi">About</a></li>
+                        <li><a href="#skills" class="footer__link" lang="ja">スキル</a><a href="#skills" class="footer__link" lang="vi">Skills</a></li>
+                        <li><a href="#certificate" class="footer__link" lang="ja">資格・認定</a><a href="#certificate" class="footer__link" lang="vi">Certificates</a></li>
+                        <li><a href="#project" class="footer__link" lang="ja">プロジェクト</a><a href="#project" class="footer__link" lang="vi">Projects</a></li>
+                        <li><a href="#contact" class="footer__link" lang="ja">連絡先</a><a href="#contact" class="footer__link" lang="vi">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer__data">
-                    <h2 class="footer__title">FOLLOW</h2>
-                    <a href="https://www.facebook.com/MinhCong999" class="footer__social"><i class='bx bxl-facebook' ></i></a>
-                    <a href="https://www.instagram.com/superb0y9x64/" class="footer__social"><i class='bx bxl-instagram' ></i></a>
-                    <a href="https://twitter.com/Minh_Cong999" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                    <h2 class="footer__title" lang="ja">SNS</h2>
+                    <h2 class="footer__title" lang="vi">Social Network</h2>
+                    <a href="https://www.facebook.com/MinhCong999" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/_mcong9x64" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://twitter.com/Minh_Cong999" class="footer__social"><i class='bx bxl-twitter'></i></a>
                 </div>
 
 
