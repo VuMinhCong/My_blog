@@ -1,0 +1,67 @@
+vi:
+  nav:
+    home: "Home"
+    about: "About"
+    skills: "Skills"
+    certificates: "Certificates"
+    projects: "Projects"
+    contact: "Contact"
+  home:
+    greeting: "HI!"
+    i_am: "I'M"
+    name: "CONG."
+    scroll_down: "Scroll down"
+  about:
+    title: "About"
+    name: "VU MINH CONG"
+    profession: "Software Engineer"
+    description: |
+      Born on 06/04/1999 (26 years old)<br>
+      Currently living in Kawasaki, Kanagawa, Japan<br><br>
+      After coming to Japan, I have accumulated 2 years of experience in Ruby application development. Especially, I have obtained AWS certification, which has helped me deepen my understanding of infrastructure and cloud services, as well as strengthen my skills in connecting application development and infrastructure.<br>
+      In my work, I always prioritize quality, pay attention to every detail to achieve the best results. I am proactive in problem-solving and value teamwork communication for effective work.
+  skills:
+    title: "Skills"
+    development: "Development Skills"
+    languages: "Language Skills"
+    japanese: "Japanese (Business)"
+    english: "English (Conversational)"
+  certificates:
+    title: "Certificates"
+    jlpt: "JLPT N2 Japanese Language Proficiency Test"
+    aws_saa: "AWS Certified Solutions Architect – Associate"
+    aws_dva: "AWS Certified Developer – Associate"
+  projects:
+    title: "Projects"
+    github_analysis: "Github Analysis"
+    factoring: "Factoring"
+    cafe: "Cafe Management System"
+  contact:
+    title: "Contact"
+    email: "Email"
+    phone: "Phone"
+    address: "Address"
+    address_value: "Room 313, 17-18 Sugashiroshita, Tama Ward, Kawasaki City, Kanagawa, Japan"
+  footer:
+    title: "VU MINH CONG"
+    description: "This is my portfolio website - a software engineer."
+    menu: "Menu"
+    social: "Social Network"
+  popups:
+    factoring:
+      title: "【Responsibilities】"
+      responsibilities:
+        - "Developed a factoring financial solution using Ruby on Rails, integrated with GMO, Freee, TrustDock, and Twilio."
+        - "Implemented features such as automated credit screening, invoice management, and payment processing."
+        - "Maintained CI/CD pipelines and handled deployments in Docker environments."
+        - "Conducted bug investigations using Sentry, CloudWatch Logs, and New Relic."
+        - "Created unit tests with RSpec and ensured code quality through RuboCop."
+        - "Handled basic design tasks, including setting internal credit limits."
+        - "Took charge of detailed design, including editing email templates and maintaining auto-approval/rejection processes."
+        - "Investigated system errors and fixed bugs as needed."
+    github_analysis:
+      title: "【Responsibilities】"
+      responsibilities:
+        - "Used project-standard conventions and libraries to render statistical charts showing team members' performance metrics."
+        - "Implemented productivity metrics (Four Keys) and automated pull request analysis."
+        - "Enhanced team workflows and improved CI/CD pipeline efficiency." 

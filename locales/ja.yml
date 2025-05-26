@@ -1,0 +1,67 @@
+ja:
+  nav:
+    home: "ホーム"
+    about: "自己紹介"
+    skills: "スキル"
+    certificates: "資格・認定"
+    projects: "プロジェクト"
+    contact: "連絡先"
+  home:
+    greeting: "こんにちは！"
+    i_am: "私は"
+    name: "コンです。"
+    scroll_down: "スクロールダウン"
+  about:
+    title: "自己紹介"
+    name: "ヴ ミン コン"
+    profession: "ソフトウェアエンジニア"
+    description: |
+      1999年4月6日生まれ（26歳）<br>
+      神奈川県川崎市在住<br><br>
+      来日して、現在2年間Rubyを使用したアプリケーション開発の経験を積んでいます。特に、AWS認定資格を取得し、インフラやクラウドサービスへの理解を深めながら、アプリケーション開発と連携できるスキルを強化してきます。<br>
+      仕事においては、常に品質を重視し、細部にまでこだわりながら成果を出すことを大切にしています。私は問題解決に対して積極的で、チームでのコミュニケーションを大切にしながら効率的に業務を進めるタイプです。
+  skills:
+    title: "スキル"
+    development: "開発スキル"
+    languages: "言語スキル"
+    japanese: "日本語（ビジネス）"
+    english: "英語（日常会話）"
+  certificates:
+    title: "資格・認定"
+    jlpt: "日本語能力試験 N2"
+    aws_saa: "AWS認定ソリューションアーキテクト – アソシエイト"
+    aws_dva: "AWS認定デベロッパー – アソシエイト"
+  projects:
+    title: "プロジェクト"
+    github_analysis: "ギットハブぶんせき"
+    factoring: "ペイトナー ファクタリング"
+    cafe: "カフェ管理システム"
+  contact:
+    title: "連絡先"
+    email: "メールアドレス"
+    phone: "電話番号"
+    address: "住所"
+    address_value: "神奈川県川崎市多摩区菅城下17-18-313号室"
+  footer:
+    title: "ヴ ミン コン"
+    description: "ソフトウェアエンジニアのポートフォリオサイトです。"
+    menu: "メニュー"
+    social: "SNS"
+  popups:
+    factoring:
+      title: "【担当業務】"
+      responsibilities:
+        - "Ruby on Rails を使用して、GMO、Freee、TrustDock、Twilio と連携するファクタリング金融ソリューションを開発。"
+        - "自動与信審査、請求書管理、支払処理を実装。"
+        - "CI/CD パイプラインの保守および Docker 環境でのデプロイ対応。"
+        - "Sentry、CloudWatch Logs、New Relic を使用したバグ調査を実施。"
+        - "RSpec による単体テスト作成と RuboCop によるコード品質の維持。"
+        - "基本設計を担当（内部上限枠の設定）。"
+        - "詳細設計を担当（メール文面の修正、自動承認／自動否認処理のメンテナンス）。"
+        - "エラー調査およびバグ修正対応。"
+    github_analysis:
+      title: "【担当業務】"
+      responsibilities:
+        - "プロジェクトのコーディング規約（コンベンション）に従い、ライブラリを活用してチームメンバーのパフォーマンス指標に関する統計グラフを表示しました。"
+        - "「Four Keys」などの生産性指標を実装し、プルリクエストの分析を自動化しました。"
+        - "チームのワークフローおよびCI/CDパイプラインの効率を向上させました。" 
