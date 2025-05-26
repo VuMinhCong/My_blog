@@ -10,6 +10,8 @@
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
         <title>VU MINH CONG - Portfolio</title>
     </head>
     <body>
@@ -18,16 +20,16 @@
             <nav class="nav bd-grid">
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active" lang="ja">ホーム</a><a href="#home" class="nav__link active" lang="vi">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link" lang="ja">自己紹介</a><a href="#about" class="nav__link" lang="vi">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link" lang="ja">スキル</a><a href="#skills" class="nav__link" lang="vi">Skills</a></li>
-                        <li class="nav__item"><a href="#certificate" class="nav__link" lang="ja">資格・認定</a><a href="#certificate" class="nav__link" lang="vi">Certificates</a></li>
-                        <li class="nav__item"><a href="#project" class="nav__link" lang="ja">プロジェクト</a><a href="#project" class="nav__link" lang="vi">Projects</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link" lang="ja">連絡先</a><a href="#contact" class="nav__link" lang="vi">Contact</a></li>
+                        <li class="nav__item"><a href="#home" class="nav__link active" data-i18n="nav.home"></a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link" data-i18n="nav.about"></a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link" data-i18n="nav.skills"></a></li>
+                        <li class="nav__item"><a href="#certificate" class="nav__link" data-i18n="nav.certificates"></a></li>
+                        <li class="nav__item"><a href="#project" class="nav__link" data-i18n="nav.projects"></a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link" data-i18n="nav.contact"></a></li>
                     </ul>
                     <div class="language-switcher">
-                        <button onclick="switchLanguage('ja')" class="lang-btn" title="Japanese">🇯🇵</button>
-                        <button onclick="switchLanguage('vi')" class="lang-btn" title="Vietnamese">🇬🇧</button>
+                        <button onclick="i18n.switchLanguage('ja')" class="lang-btn" title="Japanese">🇯🇵</button>
+                        <button onclick="i18n.switchLanguage('vi')" class="lang-btn" title="Vietnamese">🇬🇧</button>
                     </div>
                 </div>
 
@@ -46,47 +48,34 @@
             <!--===== HOME =====-->
             <section class="home" id="home">
                 <div class="home__container bd-grid">
-                    <h1 class="home__title" lang="ja"><span>こんにちは！</span><br><span>私は</span><br><span>コンです。</span></h1>
-                    <h1 class="home__title" lang="vi"><span>HI!</span><br><span>I'M</span><br><span>CONG.</span></h1>
-
+                    <h1 class="home__title">
+                        <span data-i18n="home.greeting"></span><br>
+                        <span data-i18n="home.i_am"></span><br>
+                        <span data-i18n="home.name"></span>
+                    </h1>
                     <div class="home__scroll">
-                        <a href="#about" class="home__scroll-link" lang="ja"><i class='bx bx-up-arrow-alt'></i>スクロールダウン</a>
-                        <a href="#about" class="home__scroll-link" lang="vi"><i class='bx bx-up-arrow-alt'></i>Scroll down</a>
+                        <a href="#about" class="home__scroll-link">
+                            <i class='bx bx-up-arrow-alt'></i>
+                            <span data-i18n="home.scroll_down"></span>
+                        </a>
                     </div>
-
                     <img src="img/chot1.png" alt="" class="home__img">
                 </div>
             </section>
 
             <!--===== ABOUT =====-->
             <section class="about section" id="about">
-                <h2 class="section-title" lang="ja">自己紹介</h2>
-                <h2 class="section-title" lang="vi">About</h2>
-
+                <h2 class="section-title" data-i18n="about.title"></h2>
                 <div class="about__container bd-grid">
                     <div class="about__img">
                         <img src="img/chot.png" alt="">
                     </div>
 
                     <div>
-                        <h2 class="about__subtitle" lang="ja">ヴ ミン コン</h2>
-                        <h2 class="about__subtitle" lang="vi">VU MINH CONG</h2>
+                        <h2 class="about__subtitle" data-i18n="about.name"></h2>
+                        <span class="about__profession" data-i18n="about.profession"></span>
 
-                        <span class="about__profession" lang="ja">ソフトウェアエンジニア</span>
-                        <span class="about__profession" lang="vi">Software Engineer</span>
-
-                        <p class="about__text" lang="ja">
-                            1999年4月6日生まれ（26歳）<br>
-                            神奈川県川崎市在住<br><br>
-                            来日して、現在2年間Rubyを使用したアプリケーション開発の経験を積んでいます。特に、AWS認定資格を取得し、インフラやクラウドサービスへの理解を深めながら、アプリケーション開発と連携できるスキルを強化してきます。<br>
-                            仕事においては、常に品質を重視し、細部にまでこだわりながら成果を出すことを大切にしています。私は問題解決に対して積極的で、チームでのコミュニケーションを大切にしながら効率的に業務を進めるタイプです。
-                        </p>
-                        <p class="about__text" lang="vi">
-                            Born on 06/04/1999 (26 years old)<br>
-                            Currently living in Kawasaki, Kanagawa, Japan<br><br>
-                            After coming to Japan, I have accumulated 2 years of experience in Ruby application development. Especially, I have obtained AWS certification, which has helped me deepen my understanding of infrastructure and cloud services, as well as strengthen my skills in connecting application development and infrastructure.<br>
-                            In my work, I always prioritize quality, pay attention to every detail to achieve the best results. I am proactive in problem-solving and value teamwork communication for effective work.
-                        </p>
+                        <p class="about__text" data-i18n="about.description"></p>
 
                         <div class="about__social">
                             <a href="https://www.facebook.com/MinhCong999" class="about__social-icon"><i class='bx bxl-facebook-circle'></i></a>
@@ -99,14 +88,10 @@
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
-                <h2 class="section-title" lang="ja">スキル</h2>
-                <h2 class="section-title" lang="vi">Skills</h2>
-
+                <h2 class="section-title" data-i18n="skills.title"></h2>
                 <div class="skills__container bd-grid">
                     <div class="skills__box">
-                        <h3 class="skills__subtitle" lang="ja">開発スキル</h3>
-                        <h3 class="skills__subtitle" lang="vi">Development Skills</h3>
-
+                        <h3 class="skills__subtitle" data-i18n="skills.development"></h3>
                         <span class="skills__name">Ruby</span>
                         <span class="skills__name">Ruby on Rails</span>
                         <span class="skills__name">Java</span>
@@ -117,12 +102,9 @@
                         <span class="skills__name">CI/CD</span>
                         <span class="skills__name">AWS</span>
 
-                        <h3 class="skills__subtitle" lang="ja">言語スキル</h3>
-                        <h3 class="skills__subtitle" lang="vi">Language Skills</h3>
-                        <span class="skills__name" lang="ja">日本語（ビジネス）</span>
-                        <span class="skills__name" lang="vi">Japanese (Business)</span>
-                        <span class="skills__name" lang="ja">英語（日常会話）</span>
-                        <span class="skills__name" lang="vi">English (Conversational)</span>
+                        <h3 class="skills__subtitle" data-i18n="skills.languages"></h3>
+                        <span class="skills__name" data-i18n="skills.japanese"></span>
+                        <span class="skills__name" data-i18n="skills.english"></span>
                     </div>
 
                     <div class="skills__img">
@@ -133,29 +115,27 @@
 
             <!--===== CERTIFICATE =====-->
             <section class="certificate section" id="certificate">
-                <h2 class="section-title" lang="ja">資格・認定</h2>
-                <h2 class="section-title" lang="vi">Certificates</h2>
+                <h2 class="section-title" data-i18n="certificates.title"></h2>
                 <div class="certificate__container bd-grid">
                     <div class="certificate__item">
                         <img src="img/JLPTN2.png" alt="JLPT N2" class="certificate__img">
                         <div>
                             <h3 class="certificate__name">JLPT N2</h3>
-                            <p class="certificate__desc" lang="ja">日本語能力試験 N2</p>
-                            <p class="certificate__desc" lang="vi">JLPT N2 Japanese Language Proficiency Test</p>
+                            <p class="certificate__desc" data-i18n="certificates.jlpt"></p>
                         </div>
                     </div>
                     <div class="certificate__item">
                         <img src="img/SAA.png" alt="AWS SAA" class="certificate__img">
                         <div>
                             <h3 class="certificate__name"><a href="https://www.credly.com/badges/cb8868ec-c269-428a-ab70-faccd350439b" target="_blank" rel="noopener noreferrer">AWS Certified Solutions Architect – Associate</a></h3>
-                            <p class="certificate__desc" lang="ja">AWS認定ソリューションアーキテクト – アソシエイト</p>
+                            <p class="certificate__desc" data-i18n="certificates.aws_saa"></p>
                         </div>
                     </div>
                     <div class="certificate__item">
                         <img src="img/DVA.png" alt="AWS DVA" class="certificate__img">
                         <div>
                             <h3 class="certificate__name"><a href="https://www.credly.com/badges/1eccae07-ab67-40e6-b468-9ca81c53d867" target="_blank" rel="noopener noreferrer">AWS Certified Developer – Associate</a></h3>
-                            <p class="certificate__desc" lang="ja">AWS認定デベロッパー – アソシエイト</p>
+                            <p class="certificate__desc" data-i18n="certificates.aws_dva"></p>
                         </div>
                     </div>
                 </div>
@@ -163,17 +143,14 @@
 
             <!--===== My Project =====-->
             <section class="project section" id="project">
-                <h2 class="section-title" lang="ja">プロジェクト</h2>
-                <h2 class="section-title" lang="vi">Projects</h2>
-
+                <h2 class="section-title" data-i18n="projects.title"></h2>
                 <div class="project__container bd-grid">
                     <div class="project__img">
                         <img src="img/github-ana.jpg" alt="">
 
                         <div class="project__link">
                             <a href="javascript:void(0)" class="project__link-icon" onclick="openGithubAnaPopup()"><i class="bx bx-link-alt"></i></a>
-                            <span class="project__link-name" lang="ja">ギットハブぶんせき</span>
-                            <span class="project__link-name" lang="vi">Github Analysis</span>
+                            <span class="project__link-name" data-i18n="projects.github_analysis"></span>
                         </div>
                     </div>
                     <div class="project__img">
@@ -181,8 +158,7 @@
 
                         <div class="project__link">
                             <a href="javascript:void(0)" class="project__link-icon" onclick="openFactoringPopup()"><i class="bx bx-link-alt"></i></a>
-                            <span class="project__link-name" lang="ja">ペイトナー ファクタリング</span>
-                            <span class="project__link-name" lang="vi">Facotring</span>
+                            <span class="project__link-name" data-i18n="projects.factoring"></span>
                         </div>
                     </div>
                     <div class="project__img">
@@ -190,8 +166,7 @@
 
                         <div class="project__link">
                             <a href="https://drive.google.com/file/d/1MWrfOh2o2G_uSWpGt2uDBdDJsBAmaTvZ/view?usp=sharing" class="project__link-icon"><i class="bx bx-link-alt"></i></a>
-                            <span class="project__link-name" lang="ja">カフェ管理システム</span>
-                            <span class="project__link-name" lang="vi">Cafe Management System</span>
+                            <span class="project__link-name" data-i18n="projects.cafe"></span>
                         </div>
                     </div>
                 </div>
@@ -199,23 +174,17 @@
 
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
-                <h2 class="section-title" lang="ja">連絡先</h2>
-                <h2 class="section-title" lang="vi">Contact</h2>
-
+                <h2 class="section-title" data-i18n="contact.title"></h2>
                 <div class="contact__container bd-grid">
                     <div class="contact__info">
-                        <h3 class="contact__subtitle" lang="ja">メールアドレス</h3>
-                        <h3 class="contact__subtitle" lang="vi">Email</h3>
+                        <h3 class="contact__subtitle" data-i18n="contact.email"></h3>
                         <span class="contact__text">minhcong.vu99@gmail.com</span>
 
-                        <h3 class="contact__subtitle" lang="ja">電話番号</h3>
-                        <h3 class="contact__subtitle" lang="vi">Phone</h3>
+                        <h3 class="contact__subtitle" data-i18n="contact.phone"></h3>
                         <span class="contact__text">070-2800-3487</span>
 
-                        <h3 class="contact__subtitle" lang="ja">住所</h3>
-                        <h3 class="contact__subtitle" lang="vi">Address</h3>
-                        <span class="contact__text" lang="ja">神奈川県川崎市多摩区菅城下17-18-313号室</span>
-                        <span class="contact__text" lang="vi">Room 313, 17-18 Sugashiroshita, Tama Ward, Kawasaki City, Kanagawa, Japan</span>
+                        <h3 class="contact__subtitle" data-i18n="contact.address"></h3>
+                        <span class="contact__text" data-i18n="contact.address_value"></span>
                     </div>
 
                     <form action="" class="contact__form">
@@ -236,34 +205,28 @@
         <footer class="footer section">
             <div class="footer__container bd-grid">
                 <div class="footer__data">
-                    <h2 class="footer__title" lang="ja">ヴ ミン コン</h2>
-                    <h2 class="footer__title" lang="vi">VU MINH CONG</h2>
-                    <p class="footer__text" lang="ja">ソフトウェアエンジニアのポートフォリオサイトです。</p>
-                    <p class="footer__text" lang="vi">This is my portfolio website - a software engineer.</p>
+                    <h2 class="footer__title" data-i18n="footer.title"></h2>
+                    <p class="footer__text" data-i18n="footer.description"></p>
                 </div>
 
                 <div class="footer__data">
-                    <h2 class="footer__title" lang="ja">メニュー</h2>
-                    <h2 class="footer__title" lang="vi">Menu</h2>
+                    <h2 class="footer__title" data-i18n="footer.menu"></h2>
                     <ul>
-                        <li><a href="#home" class="footer__link" lang="ja">ホーム</a><a href="#home" class="footer__link" lang="vi">Home</a></li>
-                        <li><a href="#about" class="footer__link" lang="ja">自己紹介</a><a href="#about" class="footer__link" lang="vi">About</a></li>
-                        <li><a href="#skills" class="footer__link" lang="ja">スキル</a><a href="#skills" class="footer__link" lang="vi">Skills</a></li>
-                        <li><a href="#certificate" class="footer__link" lang="ja">資格・認定</a><a href="#certificate" class="footer__link" lang="vi">Certificates</a></li>
-                        <li><a href="#project" class="footer__link" lang="ja">プロジェクト</a><a href="#project" class="footer__link" lang="vi">Projects</a></li>
-                        <li><a href="#contact" class="footer__link" lang="ja">連絡先</a><a href="#contact" class="footer__link" lang="vi">Contact</a></li>
+                        <li><a href="#home" class="footer__link" data-i18n="nav.home"></a></li>
+                        <li><a href="#about" class="footer__link" data-i18n="nav.about"></a></li>
+                        <li><a href="#skills" class="footer__link" data-i18n="nav.skills"></a></li>
+                        <li><a href="#certificate" class="footer__link" data-i18n="nav.certificates"></a></li>
+                        <li><a href="#project" class="footer__link" data-i18n="nav.projects"></a></li>
+                        <li><a href="#contact" class="footer__link" data-i18n="nav.contact"></a></li>
                     </ul>
                 </div>
 
                 <div class="footer__data">
-                    <h2 class="footer__title" lang="ja">SNS</h2>
-                    <h2 class="footer__title" lang="vi">Social Network</h2>
+                    <h2 class="footer__title" data-i18n="footer.social"></h2>
                     <a href="https://www.facebook.com/MinhCong999" class="footer__social"><i class='bx bxl-facebook'></i></a>
                     <a href="https://www.instagram.com/_mcong9x64" class="footer__social"><i class='bx bxl-instagram'></i></a>
                     <a href="https://twitter.com/Minh_Cong999" class="footer__social"><i class='bx bxl-twitter'></i></a>
                 </div>
-
-
             </div>
         </footer>
 
@@ -271,37 +234,16 @@
         <script src="https://unpkg.com/scrollreveal"></script>
 
         <!--===== MAIN JS =====-->
+        <script src="js/i18n.js"></script>
         <script src="script.js"></script>
 
         <!-- FACTORING POPUP -->
         <div id="factoring-popup" class="popup-overlay" style="display:none;">
           <div class="popup-content">
             <span class="popup-close" onclick="closeFactoringPopup()">&times;</span>
-            <div lang="ja">
-              <h3>【担当業務】</h3>
-              <ul>
-                <li>- Ruby on Rails を使用して、GMO、Freee、TrustDock、Twilio と連携するファクタリング金融ソリューションを開発。</li>
-                <li>- 自動与信審査、請求書管理、支払処理を実装。</li>
-                <li>- CI/CD パイプラインの保守および Docker 環境でのデプロイ対応。</li>
-                <li>- Sentry、CloudWatch Logs、New Relic を使用したバグ調査を実施。</li>
-                <li>- RSpec による単体テスト作成と RuboCop によるコード品質の維持。</li>
-                <li>- 基本設計を担当（内部上限枠の設定）。</li>
-                <li>- 詳細設計を担当（メール文面の修正、自動承認／自動否認処理のメンテナンス）。</li>
-                <li>- エラー調査およびバグ修正対応。</li>
-              </ul>
-            </div>
-            <div lang="vi">
-              <h3>【Responsibilities】</h3>
-              <ul>
-                <li>- Developed a factoring financial solution using Ruby on Rails, integrated with GMO, Freee, TrustDock, and Twilio.</li>
-                <li>- Implemented features such as automated credit screening, invoice management, and payment processing.</li>
-                <li>- Maintained CI/CD pipelines and handled deployments in Docker environments.</li>
-                <li>- Conducted bug investigations using Sentry, CloudWatch Logs, and New Relic.</li>
-                <li>- Created unit tests with RSpec and ensured code quality through RuboCop.</li>
-                <li>- Handled basic design tasks, including setting internal credit limits.</li>
-                <li>- Took charge of detailed design, including editing email templates and maintaining auto-approval/rejection processes.</li>
-                <li>- Investigated system errors and fixed bugs as needed.</li>
-              </ul>
+            <div>
+              <h3 data-i18n="popups.factoring.title"></h3>
+              <ul id="factoring-responsibilities"></ul>
             </div>
           </div>
         </div>
@@ -310,29 +252,9 @@
         <div id="githubana-popup" class="popup-overlay" style="display:none;">
           <div class="popup-content">
             <span class="popup-close" onclick="closeGithubAnaPopup()">&times;</span>
-            <div lang="ja">
-              <h3>【担当業務】</h3>
-              <ul>
-                <li>- プロジェクトのコーディング規約（コンベンション）に従い、ライブラリを活用してチームメンバーのパフォーマンス指標に関する統計グラフを表示しました。</li>
-                <li>- 「Four Keys」などの生産性指標を実装し、プルリクエストの分析を自動化しました。</li>
-                <li>- チームのワークフローおよびCI/CDパイプラインの効率を向上させました。</li>
-              </ul>
-            </div>
-            <div lang="vi">
-              <h3>【Responsibilities】</h3>
-              <ul>
-                <li>- Used project-standard conventions and libraries to render statistical charts showing team members' performance metrics.</li>
-                <li>- Implemented productivity metrics (Four Keys) and automated pull request analysis.</li>
-                <li>- Enhanced team workflows and improved CI/CD pipeline efficiency.</li>
-              </ul>
-            </div>
-            <div lang="en">
-              <h3>【Responsibilities】</h3>
-              <ul>
-                <li>- Used project-standard conventions and libraries to render statistical charts showing team members' performance metrics.</li>
-                <li>- Implemented productivity metrics (Four Keys) and automated pull request analysis.</li>
-                <li>- Enhanced team workflows and improved CI/CD pipeline efficiency.</li>
-              </ul>
+            <div>
+              <h3 data-i18n="popups.github_analysis.title"></h3>
+              <ul id="githubana-responsibilities"></ul>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ const sections = document.querySelectorAll('section[id]')
 window.addEventListener('scroll', scrollActive)
 
 function scrollActive(){
-    // const scrollY = window.pageYOffset
+    const scrollY = window.pageYOffset
     const currentLang = document.body.getAttribute('data-lang') || 'ja';
 
     sections.forEach(current =>{
@@ -35,7 +35,7 @@ function scrollActive(){
         const sectionId = current.getAttribute('id')
 
         document.querySelectorAll('.nav__menu a[href*=' + sectionId + ']').forEach(link => {
-            if(link.getAttribute('lang') === currentLang && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
@@ -91,40 +91,49 @@ function switchLanguage(lang) {
     if (currentLang !== lang) {
         document.body.setAttribute('data-lang', lang);
         localStorage.setItem('preferred-language', lang);
-        location.reload();
+        i18n.switchLanguage(lang);
     }
 }
 
-// Set initial language based on user's  or default to Japanese
+// Set initial language based on user's preference or default to Japanese
 document.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('preferred-language') || 'ja';
     document.body.setAttribute('data-lang', savedLang);
+    i18n.loadTranslations();
 });
 
 window.openFactoringPopup = function() {
-  document.getElementById('factoring-popup').style.display = 'flex';
-  const lang = document.body.getAttribute('data-lang') || 'ja';
-  document.querySelectorAll('#factoring-popup [lang]').forEach(el => {
-    el.style.display = (el.getAttribute('lang') === lang) ? 'block' : 'none';
-  });
+    const popup = document.getElementById('factoring-popup');
+    if (popup) {
+        popup.style.display = 'flex';
+        const responsibilities = i18n.get('popups.factoring.responsibilities');
+        const ul = document.getElementById('factoring-responsibilities');
+        if (ul && responsibilities) {
+            ul.innerHTML = responsibilities.map(item => `<li>${item}</li>`).join('');
+        }
+    }
 };
+
 window.closeFactoringPopup = function() {
-  document.getElementById('factoring-popup').style.display = 'none';
+    const popup = document.getElementById('factoring-popup');
+    if (popup) popup.style.display = 'none';
 };
 
 window.openGithubAnaPopup = function() {
-  var popup = document.getElementById('githubana-popup');
-  if (popup) {
-    popup.style.display = 'flex';
-    var lang = document.body.getAttribute('data-lang') || 'en';
-    popup.querySelectorAll('[lang]').forEach(function(el) {
-      el.style.display = (el.getAttribute('lang') === lang) ? 'block' : 'none';
-    });
-  }
+    const popup = document.getElementById('githubana-popup');
+    if (popup) {
+        popup.style.display = 'flex';
+        const responsibilities = i18n.get('popups.github_analysis.responsibilities');
+        const ul = document.getElementById('githubana-responsibilities');
+        if (ul && responsibilities) {
+            ul.innerHTML = responsibilities.map(item => `<li>${item}</li>`).join('');
+        }
+    }
 };
+
 window.closeGithubAnaPopup = function() {
-  var popup = document.getElementById('githubana-popup');
-  if (popup) popup.style.display = 'none';
+    const popup = document.getElementById('githubana-popup');
+    if (popup) popup.style.display = 'none';
 };
 
 
