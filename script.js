@@ -71,6 +71,9 @@ sr.reveal('.about__profession', {delay: 100})
 sr.reveal('.about__text', {delay: 120})
 sr.reveal('.about__social-icon', {delay: 150, interval: 80})
 
+/*SCROLL CERTIFICATE*/
+sr.reveal('.certificate__item', {delay: 120})
+
 /*SCROLL SKILLS*/
 sr.reveal('.skills__subtitle', {})
 sr.reveal('.skills__name', {distance: '20px', delay: 30, interval: 60})
