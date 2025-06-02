@@ -4,6 +4,8 @@ link website:
 https://mcong9x64-portfolio.tutorial-aws.click
 
 ## Architecture Overview
+![Architecture Diagram](img/StaticWeb_S3_Infra.png)
+
 
 The provided architecture diagram outlines a static website hosting solution using AWS services integrated with GitHub for CI/CD automation:
 
@@ -27,5 +29,3 @@ The provided architecture diagram outlines a static website hosting solution usi
 2. **GitHub Actions** triggers automatically, syncing the updated static files to the S3 bucket.
 3. **S3 Bucket** hosts the static website.
 4. Users access the website via the **Public Internet**, leveraging **Route 53** for domain resolution, **CloudFront** for efficient content delivery, and secure connections provided by **ACM**.
-
-![Architecture Diagram](img/StaticWeb_S3_Infra.png)
